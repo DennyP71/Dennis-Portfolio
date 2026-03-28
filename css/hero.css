@@ -1,0 +1,94 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.hero__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: default;
+  display: block;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-md);
+  max-width: 900px;
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.hero__intro {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-h2);
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+/* Bottom fade — sharp transition into next section */
+.hero__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Scroll-down arrow */
+.hero__arrow {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.hero__arrow svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text-tertiary);
+  animation: arrow-bounce 2s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@media (max-width: 480px) {
+  .hero__name {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .hero__intro {
+    font-size: var(--text-body);
+  }
+}

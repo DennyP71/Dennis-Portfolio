@@ -1,0 +1,46 @@
+/* Scroll-reveal base state */
+[data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Reveal: slide up */
+[data-reveal="up"],
+[data-reveal] {
+  transform: translateY(40px);
+}
+
+/* Reveal: fade only */
+[data-reveal="fade"] {
+  transform: none;
+}
+
+/* Reveal: scale in */
+[data-reveal="scale"] {
+  transform: scale(0.95);
+}
+
+/* Revealed state */
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
+}
+
+/* Staggered delays */
+[data-reveal-delay="100"].is-revealed { transition-delay: 0.1s; }
+[data-reveal-delay="200"].is-revealed { transition-delay: 0.2s; }
+[data-reveal-delay="300"].is-revealed { transition-delay: 0.3s; }
+[data-reveal-delay="400"].is-revealed { transition-delay: 0.4s; }
+[data-reveal-delay="500"].is-revealed { transition-delay: 0.5s; }
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

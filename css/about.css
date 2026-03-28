@@ -1,0 +1,74 @@
+.about {
+  background: var(--bg-secondary);
+  padding: var(--space-xl) 0;
+  position: relative;
+  padding-bottom: calc(var(--space-xl) + 3rem);
+}
+
+.about__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.about__label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding-top: 0.4rem;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__bio {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.about__bio + .about__bio {
+  margin-top: -0.5rem;
+}
+
+/* Scroll-down arrow */
+.about__arrow {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.about__arrow svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--text-tertiary);
+  animation: arrow-bounce 2s ease-in-out infinite;
+}
+
+/* Mobile: stack to single column */
+@media (max-width: 680px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .about__label {
+    font-size: 0.7rem;
+  }
+}

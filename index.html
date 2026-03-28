@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dennis Pham — Digital Marketing & AI</title>
+  <meta name="description" content="Dennis Pham — digital marketer, social media strategist, and AI professional.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <button class="nav__burger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__overlay">
+      <div class="nav__menu">
+        <a href="#about" class="nav__link">About Me</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Let's Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas class="hero__canvas"></canvas>
+    <div class="hero__container">
+      <p class="hero__intro" data-reveal>Hi, my name is</p>
+      <h1 class="hero__name" data-reveal data-reveal-delay="100">Dennis Pham</h1>
+    </div>
+    <div class="hero__fade"></div>
+    <div class="hero__arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <span class="about__label" data-reveal>About Me</span>
+      <div class="about__content">
+        <p class="about__bio" data-reveal data-reveal-delay="100">
+          Hi, I'm Dennis Pham — a Marketing Strategist and Business Graduate based in Portland, Oregon. I'm dedicated to building marketing strategies that deliver data-driven results.
+        </p>
+        <p class="about__bio" data-reveal data-reveal-delay="200">
+          I hold a Bachelor's degree in Business Administration with a focus in Marketing from Portland State University, and I'm currently looking to take the next step in my digital marketing career.
+        </p>
+        <p class="about__bio" data-reveal data-reveal-delay="300">
+          I'm also currently learning more about AI and how it can be used in marketing, content creation, workflow efficiency. I've started building a few AI-related projects and solutions as part of that learning process, including this website! I'm excited to continue developing this skill set.
+        </p>
+        <p class="about__bio" data-reveal data-reveal-delay="400">
+          With a background in marketing and hands-on experience working with community organizations, I focus on content that is not only creative but also results-driven. From social media campaigns to content planning and newsletters, I enjoy helping businesses turn ideas into content that actually performs.
+        </p>
+        <p class="about__bio" data-reveal data-reveal-delay="500">
+          Outside of work, I enjoy boxing, cooking BBQ, and staying on top of the latest social media and Artificial Intelligence trends.
+        </p>
+      </div>
+    </div>
+    <div class="about__arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="projects__header" data-reveal>
+      <span class="projects__label">Projects</span>
+    </div>
+
+    <div class="projects__track">
+      <div class="projects__card glass-card" data-reveal>
+        <div class="glass-card__bg">
+          <img src="Project experience/Team Barbell Logo - Back 1 (1).png" alt="Team Barbell Logo">
+        </div>
+        <div class="glass-card__text">
+          <h3 class="glass-card__title">Multnomah Team Barbell Newsletter</h3>
+          <p>Transformed a local Olympic weightlifting team's digital outreach by launching a professional weekly newsletter. I scaled their communication from irregular personal emails to a consistent and trackable newsletter using Beehiiv email newsletter software.</p>
+        </div>
+        <div class="glass-card__fade"></div>
+        <div class="glass-card__clear"></div>
+      </div>
+
+      <div class="projects__card glass-card" data-reveal data-reveal-delay="100">
+        <div class="glass-card__bg">
+          <img src="Project experience/Recover.png" alt="Recovery Equipment Check Out">
+        </div>
+        <div class="glass-card__text">
+          <h3 class="glass-card__title">Recovery Equipment Check Out Improvement Mock Up</h3>
+          <p>Developed a prototype for a modernized gym equipment checkout system to solve common UX barriers and tracking inaccuracies. By leveraging Claude's AI-assisted coding, I engineered a streamlined interface that makes member check out process much easier and more intuitive. This project highlights my ability to use generative AI to build functional digital solutions that enhance customer experience.</p>
+        </div>
+        <div class="glass-card__fade"></div>
+        <div class="glass-card__clear"></div>
+      </div>
+
+      <div class="projects__card glass-card" data-reveal data-reveal-delay="200">
+        <div class="glass-card__bg">
+          <video autoplay loop muted playsinline>
+            <source src="Project experience/mac-website.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="glass-card__text">
+          <h3 class="glass-card__title">Multnomah Athletic Club Website Improvement</h3>
+          <p>I recently developed a revamped website mock-up for the Multnomah Athletic Club to address navigation challenges for non-members. Leveraging AI-assisted coding via Claude and deploying through Vercel, I rebuilt the front-end experience to better showcase the club's value proposition to prospective members.</p>
+          <a href="https://mac-website-mock-up-non-member.vercel.app/" target="_blank" rel="noopener noreferrer" class="glass-card__link">Check out the website!</a>
+        </div>
+        <div class="glass-card__fade"></div>
+        <div class="glass-card__clear"></div>
+      </div>
+
+      <div class="projects__card glass-card" data-reveal data-reveal-delay="300">
+        <div class="glass-card__bg">
+          <img src="Project experience/Extract.jpg" alt="Angel Bake">
+        </div>
+        <div class="glass-card__text">
+          <h3 class="glass-card__title">Angel Bake</h3>
+          <p>I was fortunate to work with Angel Bake to create a marketing strategy. As the marketing manager I led my group to create a comprehensive social media marketing strategy to increase engagement and conversions. The project was then highlighted at the PSU capstone showcase.</p>
+        </div>
+        <div class="glass-card__fade"></div>
+        <div class="glass-card__clear"></div>
+      </div>
+
+      <div class="projects__card glass-card" data-reveal data-reveal-delay="400">
+        <div class="glass-card__bg">
+          <img src="Project experience/ACDC+Logo.webp" alt="ACDC Logo">
+        </div>
+        <div class="glass-card__text">
+          <h3 class="glass-card__title">Asian Community Development Center</h3>
+          <p>I achieved 150% growth in Instagram viewership and a 300% increase in reach within a single 30-day period. This growth was fueled by a diverse content mix of educational posts and targeted stories designed specifically to engage parents and students. To ensure long-term consistency, I built a custom social media ecosystem in Google Sheets that streamlined post coordination and enabled precise performance tracking for leadership.</p>
+        </div>
+        <div class="glass-card__fade"></div>
+        <div class="glass-card__clear"></div>
+      </div>
+    </div>
+
+    <div class="projects__nav">
+      <button class="projects__prev" aria-label="Previous project">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="projects__dots">
+        <button class="projects__dot is-active" aria-label="Go to project 1"></button>
+        <button class="projects__dot" aria-label="Go to project 2"></button>
+        <button class="projects__dot" aria-label="Go to project 3"></button>
+        <button class="projects__dot" aria-label="Go to project 4"></button>
+        <button class="projects__dot" aria-label="Go to project 5"></button>
+      </div>
+      <button class="projects__next" aria-label="Next project">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__container">
+      <h2 class="footer__heading" data-reveal>Let's connect.</h2>
+      <div class="footer__grid">
+        <div data-reveal data-reveal-delay="100">
+          <p class="footer__item-label">Email</p>
+          <a href="mailto:Dennispham54@gmail.com" class="footer__item-value">Dennispham54@gmail.com</a>
+        </div>
+        <div data-reveal data-reveal-delay="200">
+          <p class="footer__item-label">LinkedIn</p>
+          <a href="https://linkedin.com/in/dennis-p-a38478125" target="_blank" rel="noopener noreferrer" class="footer__item-value footer__linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom" data-reveal data-reveal-delay="400">
+        &copy; 2026 Dennis Pham. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/interactive-bg.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>
