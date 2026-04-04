@@ -68,6 +68,15 @@
   object-fit: cover;
 }
 
+.glass-card__bg--logo {
+  background: var(--bg-secondary);
+}
+
+.glass-card__bg--logo img {
+  object-fit: contain;
+  padding: 2rem;
+}
+
 /* Left text side — frosted glass over the image */
 .glass-card__text {
   position: relative;
