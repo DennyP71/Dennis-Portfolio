@@ -1,3 +1,11 @@
 .DS_Store
 .playwright-mcp/
 *.mov
+
+# Raw camera/screen-recording originals — optimized versions are committed instead
+Recovery_Equipment_Checkout_Case_Study.pdf
+assets/Splitscreen.JPG
+assets/Midpage.JPG
+assets/Confirmation.png
+assets/OOC.PNG
+assets/Auto scroll demo.MP4
