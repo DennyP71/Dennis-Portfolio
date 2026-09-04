@@ -1,0 +1,614 @@
+/* ============ CASE STUDY HERO ============ */
+.case-hero {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 4rem 0 var(--space-md);
+}
+
+.case-hero__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.case-hero__text {
+  max-width: 560px;
+}
+
+/* App mockup — pokes out from the middle-right */
+.case-hero__visual {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  width: 640px;
+  max-width: 50vw;
+  z-index: 1;
+  transform: translateY(-50%) rotate(4deg);
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.case-hero__visual:hover {
+  transform: translateY(calc(-50% - 6px)) rotate(1deg);
+}
+
+.browser-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.16), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.browser-frame__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #f0f0f0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.browser-frame__bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+
+.browser-frame__bar span:nth-child(1) { background: #ff5f57; }
+.browser-frame__bar span:nth-child(2) { background: #febc2e; }
+.browser-frame__bar span:nth-child(3) { background: #28c840; }
+
+.browser-frame__screen {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.browser-frame__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.case-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-lg);
+  transition: color 0.2s ease;
+}
+
+.case-hero__back:hover {
+  color: var(--text-primary);
+}
+
+.case-hero__label {
+  display: block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.case-hero__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-h1);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.case-hero__meta {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-md);
+}
+
+.case-hero__summary {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 640px;
+  margin-bottom: var(--space-md);
+}
+
+.case-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-small);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  transition: transform 0.25s var(--ease-out-expo), background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn--ghost:hover {
+  border-color: var(--text-tertiary);
+  transform: translateY(-2px);
+}
+
+/* ============ CASE BODY / TABS ============ */
+.case-body {
+  background: var(--bg-primary);
+  padding: var(--space-md) 0 var(--space-lg);
+}
+
+.case-tabs {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.case-tabs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.case-tabs__trigger {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  cursor: pointer;
+  padding: 1.5rem 1.75rem;
+  text-align: left;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.case-tabs__trigger:hover {
+  border-color: var(--text-tertiary);
+}
+
+.case-tabs__trigger.is-active {
+  border-color: var(--text-primary);
+  background: var(--bg-primary);
+  z-index: 2;
+}
+
+/* Pointer — the selected trigger grows a point aimed at the reading panel */
+.case-tabs__trigger::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 9px solid var(--text-primary);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition: transform 0.3s var(--ease-out-expo), opacity 0.3s ease;
+}
+
+.case-tabs__trigger.is-active::after {
+  transform: translateY(-50%) scaleX(1);
+  opacity: 1;
+}
+
+.case-tabs__number {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.case-tabs__trigger.is-active .case-tabs__number {
+  color: var(--text-primary);
+}
+
+.case-tabs__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.case-tabs__panel {
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 3rem;
+  min-height: 320px;
+}
+
+.case-tabs__content {
+  display: none;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 760px;
+  animation: tabFadeIn 0.4s var(--ease-out-expo);
+}
+
+.case-tabs__content.is-active {
+  display: flex;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.subblock__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.6rem;
+}
+
+.subblock p {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.subblock ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.subblock li {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.subblock li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
+
+.solution-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.solution-item__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.solution-item p {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--text-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.why-box {
+  border-left: 2px solid var(--border-subtle);
+  padding: 0.9rem 0 0.9rem 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 0 10px 10px 0;
+}
+
+.why-box__label {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.4rem;
+}
+
+.why-box p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  padding-right: 1.25rem;
+}
+
+/* Before/after image comparison */
+.compare-caption {
+  width: 90%;
+  margin: 0 auto 0.85rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.compare {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.compare__item {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.compare__frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  padding: 0.4rem;
+}
+
+.compare__frame img,
+.compare__frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.compare__frame img:hover,
+.compare__frame video:hover {
+  transform: scale(1.03);
+}
+
+.compare__label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+}
+
+.compare__arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+}
+
+.compare__arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.solution-divider {
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+/* Below this, the poking-out mockup no longer has room beside the text */
+@media (max-width: 960px) {
+  .case-hero__visual {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+    margin: var(--space-lg) auto 0;
+    transform: none;
+  }
+
+  .case-hero__visual:hover {
+    transform: translateY(-4px);
+  }
+
+  .case-hero__text {
+    max-width: 100%;
+  }
+}
+
+/* Below this, the side-by-side reading layout stacks: list on top, panel below */
+@media (max-width: 860px) {
+  .case-tabs {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .case-tabs__list {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .case-tabs__trigger {
+    width: auto;
+    flex: 1 1 auto;
+    padding: 0.85rem 1rem;
+  }
+
+  .case-tabs__title {
+    font-size: 0.9rem;
+  }
+
+  /* Point down into the panel instead of sideways */
+  .case-tabs__trigger::after {
+    top: auto;
+    right: auto;
+    bottom: -8px;
+    left: 50%;
+    border-top: 9px solid var(--text-primary);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: none;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top center;
+  }
+
+  .case-tabs__trigger.is-active::after {
+    transform: translateX(-50%) scaleY(1);
+  }
+
+  .case-tabs__panel {
+    padding: 1.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .case-hero {
+    padding: calc(var(--space-lg) + 1rem) 0 var(--space-sm);
+  }
+
+  .case-hero__visual {
+    margin-top: var(--space-md);
+  }
+
+  .case-tabs__trigger {
+    flex: 1 1 100%;
+  }
+
+  .case-tabs__panel {
+    padding: 1.5rem;
+  }
+
+  .compare {
+    gap: 0.75rem;
+  }
+}
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: rgba(10, 10, 10, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img,
+.lightbox__video {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.lightbox__video {
+  display: none;
+}
+
+.lightbox.is-open .lightbox__img,
+.lightbox.is-open .lightbox__video {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox__close svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;
+}
+
+@media (max-width: 680px) {
+  .lightbox {
+    padding: 1.5rem;
+  }
+
+  .lightbox__close {
+    top: 1rem;
+    right: 1rem;
+  }
+}
